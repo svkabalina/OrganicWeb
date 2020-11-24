@@ -50,11 +50,26 @@ body {
     align-items: center;
     &-text {
         flex: 0 0 40%;
+        padding-top: 190px;
         &__description {
             font-size: 1.12rem;
             line-height: 1.51;
             margin-top:60px;
             margin-bottom: 77px;
+        }
+    }
+    &-visual {
+        border: 1px solid rgba($gray, $alpha);
+        border-radius: 100%;
+        padding: 53px;
+        &__image {
+            border: 1px solid rgba($gray, $alpha);
+            border-radius: 100%;
+            padding: 21px;
+            img {
+                border-radius: 100%;
+                box-shadow: 15px 48px 42px 0px rgba($gray, $alpha);
+            }
         }
     }
 }
