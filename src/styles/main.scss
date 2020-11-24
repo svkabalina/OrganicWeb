@@ -43,6 +43,31 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding-bottom: 100px;
+    position: relative;
+    &__image {
+        position: absolute;
+    }
+    &__tomato {
+        right: 177px;
+        bottom: 15px;
+    }
+    &__cucumber {
+        left: 746px;
+        top: 0;
+    }
+    &__avocado {
+        right: 0;
+        top: 46px;
+    }
+    &__pepper {
+        left: 94px;
+        top: 398px;
+    }
+    &__beans {
+        left: 0;
+        bottom: 68px;
+    }
 }
 .main {
     display: flex;
@@ -50,18 +75,19 @@ body {
     align-items: center;
     &-text {
         flex: 0 0 40%;
-        padding-top: 190px;
+        padding-top: 24px;
         &__description {
             font-size: 1.12rem;
             line-height: 1.51;
-            margin-top:60px;
-            margin-bottom: 77px;
+            margin-top:30px;
+            margin-bottom: 77px; 
         }
     }
     &-visual {
         border: 1px solid rgba($gray, $alpha);
         border-radius: 100%;
         padding: 53px;
+        position: relative;
         &__image {
             border: 1px solid rgba($gray, $alpha);
             border-radius: 100%;
@@ -69,6 +95,59 @@ body {
             img {
                 border-radius: 100%;
                 box-shadow: 15px 48px 42px 0px rgba($gray, $alpha);
+            }
+        }
+        &__btn {
+            background-color: transparent;
+            border: none;
+            color: rgba($gray, 0.8);
+            text-align: left;
+            position: absolute;
+            span {
+                color: rgba($gray, 1);
+                display: block;
+                margin-top: 6px;
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: 11px;
+                height: 11px;
+                border-radius: 100%;
+                background-color: $gray;
+                box-shadow: 0 0 0 4px #fff, 0 0 0 5px $gray;
+                position: absolute;
+            }
+            &:focus {
+                outline: none; 
+                &::before {
+                    background-color: $orange;
+                    box-shadow: 0 0 0 4px #fff, 0 0 0 5px $orange;
+                }
+            }
+        }
+        &__01 {
+            left:58px;
+            top:45px;
+            &::before {
+                left:91px;
+                top:22px;
+            }
+        }
+        &__02 {
+            right:-4px;
+            top:190px;
+            &::before {
+                right:94px;
+                top:21px;
+            }
+        }
+        &__03 {
+            right: 236px;
+            bottom: -48px;
+            &::before {
+                right: 37px;
+                bottom: 56px;
             }
         }
     }
