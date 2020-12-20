@@ -717,12 +717,15 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-bottom: 160px;
 }
 .box-form {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 160px;
+    .title {
+        margin-bottom: 60px;
+    }
 
 }
 .box-form-list {
@@ -814,8 +817,5 @@ body {
     flex: 0 0 39%;
     &:last-child {
         flex: 0 0 41%; 
-    }
-    title {
-        margin-bottom: 60px;
     }
 }
